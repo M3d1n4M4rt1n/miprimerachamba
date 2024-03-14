@@ -1,1 +1,87 @@
-Holi, soy Martin Medina
+<html>
+    <title>Clase 01</title>
+    <body>
+
+    </body>
+    <script>
+
+        //JSON
+        const exdeAxel = [
+            {
+                "nombre": "Miguela",
+                "edad": 17
+            },
+            {
+                "nombre": "Cristhian",
+                "edad": 23
+            },
+            {
+                "nombre": "Marcial",
+                "edad": 16
+            },
+            {
+                "nombre": "JP",
+                "edad": 18
+            },
+            {
+                "nombre": "Ariam",
+                "edad": 17
+            },
+            {
+                "nombre": "Julieta",
+                "edad": 22
+            }
+        ];  
+        function isLegal(edad, nombre) {
+            if (edad > 18 || edad == 18) {
+                console.log(nombre+" es legal");
+            }
+        }
+        /*for (let i=0; i<edades.length; i++){
+            console.log(edades[i]+1);
+        } */
+        exdeAxel.forEach((e) => {
+            // es legal
+            isLegal(e.edad, e.nombre);            
+        });
+
+
+        // JSON de triángulos
+        const triangulos = [
+            {
+                "base": 10,
+                "altura": 5
+            },
+            {
+                "base": 7,
+                "altura": 3
+            },
+            {
+                "base": 20,
+                "altura": 10
+            },
+            {
+                "base": 15,
+                "altura": 7
+            },
+            {
+                "base": 20,
+                "altura": 9
+            },
+            {
+                "base": 50,
+                "altura": 25
+            },
+        ];
+
+        // Calcula el área de un triángulo
+        function calcularArea(base, altura) {
+            return (base * altura) / 2;
+        }
+
+        // Itera sobre el array de triángulos e imprime el área de cada uno
+        triangulos.forEach((triangulo) => {
+            console.log(`El área del triángulo es: ${calcularArea(triangulo.base, triangulo.altura)}`);
+        });
+    </script>
+</html>
